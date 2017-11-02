@@ -7,10 +7,10 @@ session_start();
 
 require_once 'vendor/autoload.php';
 
-DB::$dbName = 'slimshop';
-DB::$user = 'slimshop';
+DB::$dbName = 'cp4809_project';
+DB::$user = 'cp4809_project';
 DB::$encoding = 'utf8';
-DB::$password = 'odlKfx1M1VkQnkTQ';
+DB::$password = 'xOdGn-.#xwf+';
 
 // Slim creation and setup
 $app = new \Slim\Slim(array(
@@ -35,6 +35,8 @@ if (!isset($_SESSION['user'])) {
 }
 
 // URL/event handlers go here
+$app->get('/', function() use ($app) {
+    echo "This is Teacher's Project";
+});
 
 $app->run();
-
